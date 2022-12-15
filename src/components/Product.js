@@ -42,12 +42,12 @@ function Product() {
                 <div className="flex flex-col lg:flex-row">
                     <div className="pt-20 w-full md:h-[100% - 80px] md:flex flex-col lg:max-w-[40%] ">
                         <div className="md:flex justify-center items-center">
-                            <img id='bigImg' className='rounded-lg shadow-xl shadow-blue-900 max-h-[280px]' src={thumbnail} alt="" />
+                            <img id='bigImg' className='rounded-lg shadow-xl shadow-blue-900 max-h-[280px]' src={thumbnail} alt="demoImg" />
                         </div>
-                        <div className="grid grid-cols-5 gap-4 p-8">
+                        <div className="grid grid-cols-5  gap-4 p-2 mt-8">
                             {images?.length && images.map((item, i) => (
                                 <div key={`sD${i}`} id={`sD${i}`} className={`flex justify-center items-center ${i === images.length - 1 ? `border-4 border-solid border-gray-900` : ''} rounded-md shadow-lg shadow-gray-700 hover:cursor-pointer `}>
-                                    <img onClick={(e) => imageChange(e)} id={`sI${i}`} className='rounded-md max-h-[100px]' src={item} alt={``} />
+                                    <img onClick={(e) => imageChange(e)} id={`sI${i}`} className='rounded-md h-16' src={item} alt={`smI${i}`} />
                                 </div>
                             ))}
                         </div>
