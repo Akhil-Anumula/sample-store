@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
     return (
-        <div name="contact" className='w-full h-screen flex flex-col justify-between'>
+        <div id='contact' className='w-full h-screen flex flex-col justify-between'>
             <div className="w-full py-40">
                 <h1 className='text-3xl font-bold underline p-4 md:py-8'>Contact Us</h1>
                 <p className="font-semibold text-lg p-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quo quis amet fugit voluptatem blanditiis, laboriosam reprehenderit nam fugiat itaque nemo similique nobis, odio a magnam. Libero, consectetur facilis. Animi!

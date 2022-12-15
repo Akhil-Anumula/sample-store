@@ -12,9 +12,9 @@ function Products() {
       .catch(err => console.log(err))
   }, [])
   return (
-    <div id='products' name="products" className="w-full p-4 lg:max-w-[1240px] mx-auto">
+    <div id='products' className="w-full p-4 lg:max-w-[1240px] mx-auto">
       <h2 className='text-3xl font-bold underline py-8'>Products</h2>
-      <div className='grid grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8'>
         {products.map((item, i) => (
 
           <div key={`product${i}`} onClick={() => navigate(`/product/${item.id}`)} className="flex flex-col bg-black rounded-lg shadow-xl shadow-gray-900 text-white text-center cursor-pointer hover:scale-105 duration-300 ease-in" >

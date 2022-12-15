@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div id='about' name="about" className='w-full md:h-screen text-black p-8 '>
+    <div id='about' className='w-full md:h-screen text-black p-8 '>
       <div className="md:w-full md:h-screen md:flex flex-col justify-center">
         <h1 className='text-3xl font-bold underline p-4 md:py-8'>About Us</h1>
         <p className="font-semibold text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quo quis amet fugit voluptatem blanditiis, laboriosam reprehenderit nam fugiat itaque nemo similique nobis, odio a magnam. Libero, consectetur facilis. Animi!
