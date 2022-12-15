@@ -16,6 +16,25 @@ function Product() {
 
     const { thumbnail, brand, description, images, price, rating, title } = proData;
 
+
+    function imageChange(e) {
+        let defActDiv = document.getElementsByClassName("border-4")
+        let currActDiv = document.getElementById(defActDiv[0].id)
+        let classes = ["border-4", "border-solid", "border-gray-900"]
+        classes.map((e) => (
+            currActDiv.classList.toggle(e)
+        ))
+        let smImgId = e.target.id.charAt(e.target.id.length - 1)
+        let smImg = document.getElementById(e.target.id)
+        let bigImg = document.getElementById('bigImg')
+        bigImg.src = smImg.src
+        let smDiv = document.getElementById(`sD${smImgId}`)
+        classes.map((e) => (
+            smDiv.classList.toggle(e)
+        ))
+        defActDiv = smDiv;
+
+    }
     return (
         <>
             <Navbar />
@@ -23,12 +42,12 @@ function Product() {
                 <div className="flex flex-col lg:flex-row">
                     <div className="pt-20 w-full md:h-[100% - 80px] md:flex flex-col lg:max-w-[40%] ">
                         <div className="md:flex justify-center items-center">
-                            <img className='rounded-lg shadow-xl shadow-blue-900 max-h-[280px]' src={thumbnail} alt="" />
+                            <img id='bigImg' className='rounded-lg shadow-xl shadow-blue-900 max-h-[280px]' src={thumbnail} alt="" />
                         </div>
                         <div className="grid grid-cols-5 gap-4 p-8">
                             {images?.length && images.map((item, i) => (
-                                <div key={`smi${i}`} className="flex justify-center items-center  rounded-md shadow shadow-gray-700">
-                                    <img className='rounded-md max-h-[100px]' src={item} alt={``} />
+                                <div key={`sD${i}`} id={`sD${i}`} className={`flex justify-center items-center ${i === images.length - 1 ? `border-4 border-solid border-gray-900` : ''} rounded-md shadow-lg shadow-gray-700 hover:cursor-pointer `}>
+                                    <img onClick={(e) => imageChange(e)} id={`sI${i}`} className='rounded-md max-h-[100px]' src={item} alt={``} />
                                 </div>
                             ))}
                         </div>
